@@ -1,4 +1,5 @@
 import http, { IncomingMessage, Server, ServerResponse } from "http";
+import config from "./config";
 
 const server: Server = http.createServer(
   (req: IncomingMessage, res: ServerResponse) => {
@@ -11,6 +12,6 @@ const server: Server = http.createServer(
   }
 );
 
-server.listen(5000, () => {
-  console.log(`Server is running on port 5000`);
+server.listen(config.port, () => {
+  console.log(`Server is listening on port ${config.port}`);
 });
