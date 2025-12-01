@@ -1,11 +1,12 @@
 import http, { IncomingMessage, Server, ServerResponse } from "http";
 import config from "./config";
 import addRoutes, { RouteHandler, routes } from "./helpers/RouteHandler";
+import "./routes/index";
 
-addRoutes("GET", "/", (req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ message: "Hello World", path: req.url }));
-});
+// addRoutes("GET", "/", (req, res) => {
+//   res.writeHead(200, { "Content-Type": "application/json" });
+//   res.end(JSON.stringify({ message: "Hello World", path: req.url }));
+// });
 
 const server: Server = http.createServer(
   (req: IncomingMessage, res: ServerResponse) => {
@@ -25,7 +26,6 @@ const server: Server = http.createServer(
       res.end(JSON.stringify({ message: "Route Not Found", path: req.url }));
     }
 
-   
     // if (req.url === "/api" && req.method === "GET") {
     //   res.writeHead(200, { "Content-Type": "application/json" });
     //   res.end(JSON.stringify({ message: "Health Status Ok", path: req.url }));
