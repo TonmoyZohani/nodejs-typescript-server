@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "phone": "+919876543210",
+    "address": "123 Main Street, New York, NY 10012"
+  },
+  {
+    "id": 2,
+    "name": "Tonmoy Zohani",
+    "email": "tonmoy@gmail.com",
+    "phone": "01303788797",
+    "address": "Dhaka, Bangladesh"
+  }
+]
