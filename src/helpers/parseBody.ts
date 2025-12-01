@@ -4,7 +4,7 @@ async function parseBody(req: IncomingMessage): Promise<any> {
   return new Promise((resolve, reject) => {
     let body = "";
     req.on("data", (chunk) => {
-      body += chunk.toString();
+      body += chunk.toString(); // convert buffer to string
     });
 
     req.on("end", () => {
